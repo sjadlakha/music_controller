@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Conroller</title>
+
+    {% load static %} {% comment %} Load the javascript code that we will be
+    bundling i.e. the static folder {% endcomment %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}"
+    />
+  </head>
+  <body>
+    <div id="main">
+    {% comment %} react will grab the below div {% endcomment %}
+      <div id="app"></div>
+    </div>
+
+{% comment %} this syntax means use the static folder and combine it with fronten/main.js {% endcomment %}
+    <script src ="{% static "frontend/main.js" %}"></script>
+  </body>
+</html>
